@@ -8,15 +8,29 @@ title: 11ty Boilerplate
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Alpine.js & Alpine Fetch -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/fetch@latest/dist/cdn.min.js"></script>
+
   <link rel="stylesheet" href="/styles/screen.css">
 </head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="/" title="Go home">Home</a></li>
-      <li><a href="/about/" title="About the boilerplate">About</a></li>
+<body class="p-6 bg-gray-100">
+
+  <nav class="bg-white shadow-md p-4 rounded-lg">
+    <ul class="flex space-x-4">
+      <li><a href="/" title="Go home" class="text-blue-500 hover:underline">Home</a></li>
+      <li><a href="/about/" title="About the boilerplate" class="text-blue-500 hover:underline">About</a></li>
+      <li><a href="/ai-reflection/" title="AI Reflection" class="text-blue-500 hover:underline">AI Reflection</a></li>
     </ul>
   </nav>
+
+  <main class="mt-6">
     {{ content }}
+  </main>
+
 </body>
 </html>
